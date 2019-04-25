@@ -1,0 +1,22 @@
+This is step by step tutorial to installing golang from git source
+
+1. The steps below are shown at: https://golang.org/doc/install/source
+
+2. Clone the go's repository: git clone https://go.googlesource.com/go
+
+3. Change active dir to cloned repository: cd go
+
+4. See the current branch: git branch
+
+5. See all the release branch: git branch -a
+
+6. Checkout to any version of golang that you want: git checkout release-branch.go1.11
+
+7. Change active dir to src, so we can install Go Distribution: cd src
+
+8. Run the command which has created: ./all.bash
+   if you had something wrong like this
+   ERROR: Cannot find /home/adithyavisnu/go1.4/bin/go.
+   that means you have not installed the go bootstrap from scratch, so you should do:
+
+   
