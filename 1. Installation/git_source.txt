@@ -18,5 +18,15 @@ This is step by step tutorial to installing golang from git source
    if you had something wrong like this
    ERROR: Cannot find /home/adithyavisnu/go1.4/bin/go.
    that means you have not installed the go bootstrap from scratch, so you should do:
+   - see the download page on : https://golang.org/dl/
+     and pick a version you do want to become a base compiler for installing via github. 
+   - download the go1.xx.xx.linux-amd64.tar.gz
+   - extract to your profile folder. eg. /home/adithyvisnu and rename to go1.4. so the folder could be /home/adithyavisnu/go1.4 and has a bin folder.
 
-   
+9. Back to clonned git repository of go and change dir to src
+
+10. Run the command ./all.bash once again. If the test runs failed, then you should try a different release branches.
+
+11. After all those test passed you will have to registry the go source to your PATH.
+
+12. The things can be tested
