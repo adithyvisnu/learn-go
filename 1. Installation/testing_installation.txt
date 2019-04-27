@@ -1,0 +1,45 @@
+This is a part of installation that we have done before.
+
+That is to prove a installation has done well.
+
+1. If you are concern about your golang source then you could make a folder anywhere then register to GOPATH environment variables
+   eg. I will save my all golang source on a folder named golang_source which had a path on /home/adithyavisnu/Documents/golang_source
+   Then I could do: 
+     EXPORT GOPATH=/home/adithyavisnu/Documents/golang_source
+     or
+     Add export command above into your bash.rc or .profile for makes them as a bash env or profile env
+   To apply these changes you might try source ~/.profile or ~/.bashrc or logout even restart your laptop to apply the changes
+   
+2. Inside the golang_source, create 3 folder named pkg, bin, src.
+   pkg folder will contain a packages that we have downloaded
+   bin folder will contain a executeables sources
+   src of course will be a contain all our source go projects
+
+3. Create a folder under src folder on $GOPATH. 
+   eg. /home/adithyavisnu/Documents/golang_source/src/adithyavisnu/check_installation
+
+4. Create file main.go to test a go compiler. And just copy-paste the code below:
+   package main
+
+   import "fmt"
+
+   func main() {
+	fmt.Printf("hello, world\n")
+   }
+
+5. Then check go compiler with this command: go run main.go
+   It should be appear 'hello, world' on your cmd/terminal
+
+6. There are two approach for running a go program.
+   go run and go install.
+   The different that I know from those commands are:
+   1. Go run can run any single .go file which contain main function on one folder.
+      eg: hello_wold.go and count_words.go are under the same folder and each files has a main function, then it can be run separately
+   2. Go install finds a file under a folder which contain main function. Go compiler will installing those main function and its dependencies.
+      The name of executeables program will be the folder name and it places under $GOPATH/bin/
+      eg. if I installed the program above, then it should appear on $GOPATH/bin/check_installation
+          so we can execute this apps by run a command $GOPATH/bin/check_installation
+
+7. You can use go version to check current version of golang compiler
+
+8. The set up is done, let's rock with Hello World!
