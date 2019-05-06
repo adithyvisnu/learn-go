@@ -1,3 +1,5 @@
+// To run this program use this command
+//      go run learn-declarations.go learn-function.go
 package main
 
 import "fmt"
@@ -28,8 +30,6 @@ func main() {
 
 	// new card is placed on another go files
 	// but in the same directory, so it calledable
-	// so to run this program use this command
-	//      go run learn-declarations.go learn-function.go
 	newc := newCard()
 	fmt.Println(newc)
 }
