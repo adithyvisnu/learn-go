@@ -15,7 +15,7 @@ func main() {
 	card := "Ace of Spades"
 	// we no longer have to call initiation if we want to
 	// reassign the variables
-	card = "Five of Clovers"
+	card = "Five of Spades"
 	fmt.Println(card)
 
 	var tf bool
@@ -26,14 +26,10 @@ func main() {
 	i = 1002
 	fmt.Println(i)
 
+	// new card is placed on another go files
+	// but in the same directory, so it calledable
+	// so to run this program use this command
+	//      go run learn-declarations.go learn-function.go
 	newc := newCard()
 	fmt.Println(newc)
-}
-
-// declare a new function that have
-// newCard is the name of function
-// string is the return type from
-//        the function when its invoked
-func newCard() string {
-	return "Five of Clovers"
 }
