@@ -24,7 +24,7 @@ func newDeck() deck {
 
 	for _, suits := range cardSuits {
 		for _, values := range cardValues {
-			cards = append(cards, suits+" of "+values)
+			cards = append(cards, values+" of "+suits)
 		}
 	}
 
@@ -40,4 +40,13 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+// what the heck with the return values?
+// it just a multiple return values of types
+// both of return value is the type of deck
+// first return value will taken by first variable
+// which call the function. And so forth
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }

@@ -2,6 +2,8 @@
 // 		go run main.go deck.go
 package main
 
+import "fmt"
+
 func main() {
 	// this one the first approach for learning
 	// the function receiver method
@@ -15,5 +17,10 @@ func main() {
 	// this is a new code for declaring a deck
 	// declaring deck with the new function
 	cards := newDeck()
-	cards.print()
+	// cards.print()
+
+	// this is a multiple return values function
+	hands, remainingCards := deal(cards, 11)
+	fmt.Println(hands)
+	fmt.Println(remainingCards)
 }
