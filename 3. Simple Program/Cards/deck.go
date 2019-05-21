@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // create type called 'deck'
@@ -73,4 +75,17 @@ func newDeckFromFile(filename string) deck {
 
 	str := strings.Split(string(byteSlices), ",")
 	return deck(str)
+}
+
+func (d deck) shuffle() {
+	// see golang.org/pkg
+	// this function built for seeds the random number
+	// based on time unix nano funtion
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+
+	for index := range d {
+		newPosition := r.Intn(len(d) - 1)
+		d[index], d[newPosition] = d[newPosition], d[index]
+	}
 }
