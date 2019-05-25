@@ -19,22 +19,28 @@ type person struct {
 func main() {
 	var rob person
 	fmt.Printf("%+v\n", rob)
+	fmt.Println()
 	rob.firstName = "Rob"
 	rob.lastName = "Pike"
 	fmt.Printf("%+v\n", rob)
+	fmt.Println()
 
 	adith := person{
 		firstName: "Adithya Visnu",
 		lastName:  "Prasetyo Putra",
 	}
 	fmt.Println(adith)
+	fmt.Println()
 
 	bob := person{"Uncle", "Bob", contactInfo{}}
 	fmt.Println(bob)
+	fmt.Println()
 
 	reid := person{"Uncle", "Reid", contactInfo{"reidididi@gmail.com", 40555}}
 	reid.updateFirstName("Shawn")
 	reid.print()
+	fmt.Println()
+
 	// why those code above is not replacing the first name?
 	// see the explanation below on updateFirstName function
 
@@ -44,6 +50,8 @@ func main() {
 	// * or stars: is to get an value from an particular address
 	reidPointer := &reid
 	fmt.Println(reidPointer)
+	fmt.Println()
+
 	reidPointer.updateLastName("Hannah")
 	reid.print()
 }
@@ -67,6 +75,6 @@ func (p person) updateFirstName(newFirstName string) {
 }
 
 // print formats function is for printing a struct recursively with its values
-func (p person) Print() {
+func (p person) print() {
 	fmt.Printf("%+v\n", p)
 }
