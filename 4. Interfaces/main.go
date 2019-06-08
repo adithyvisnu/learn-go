@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Interfaces is contract to help us manage types
 // any type that has a getGreeting function with
 // string as the return value will included on
 // the type bot interfaces automatically
