@@ -20,9 +20,14 @@ func main() {
 		go checkLink(link, c)
 	}
 
+	// for {
+	// 	fmt.Println(<-c)
+	// }
+
 	for {
-		fmt.Println(<-c)
+		go checkLink(<-c, c)
 	}
+
 }
 
 func checkLink(link string, c chan string) {
