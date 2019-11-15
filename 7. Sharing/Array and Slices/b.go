@@ -3,13 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	// primes := [6]int{2, 3, 5, 7, 11, 13}
+	// primes := [6]int{}
+	// fmt.Println(primes)
+	// primes[1] = 12
+	// fmt.Println(primes)
 
+	// primes[2] = "string"
+	// fmt.Println(primes)
 	// var s = primes[1:4]
 	// s ngambil dari variabel primes
 	// 1 = index mulai
 	// 4 = index akhir tapi gak diambil value nya
-	// var s = primes[1:4]
+	// var s = primes[:3]
 	// fmt.Println(s)
 
 	// kartu := []string{"padung", "lope", "keriting", "ketupat"}
@@ -30,27 +35,31 @@ func main() {
 	for index, value := range numbers {
 		numbers[index] = value + index
 	}
+	fmt.Println(numbers)
+	fmt.Println(len(numbers))
+	fmt.Println(cap(numbers))
+	fmt.Println(numbers[2:5])
+	// numbers[4] = 12
 	// fmt.Println(numbers)
-	// fmt.Println(len(numbers))
-	// fmt.Println(cap(numbers))
-	// fmt.Println(numbers[2:5])
 	numbers = append(numbers, 3)
-	// fmt.Println(numbers)
+	fmt.Println(numbers)
 
 	// numbers = append(numbers[:1], numbers[1:0])
 	// fmt.Println(numbers)
 
-	memory := numbers[2:5]
+	memory := numbers[2:8]
+	fmt.Println(cap(memory))
 	memory[2] = 10
-	// fmt.Println(memory)
+	fmt.Println(memory)
 
 	// fmt.Println(cap(memory))
 
-	g := cap(memory)
-	for index := 0; index < g; index++ {
-		memory[index] = index
-		fmt.Printf("%d", memory[index])
-	}
+	// g := cap(memory)
+	// fmt.Println(g)
+	// for index := 0; index < g; index++ {
+	// 	memory[index] = index
+	// 	fmt.Printf("%d", memory[index])
+	// }
 	// fmt.Println(memory)
 
 	// for index, value := range cap(memory) {
