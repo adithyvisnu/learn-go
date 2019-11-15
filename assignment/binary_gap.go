@@ -3,8 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	var input = 1211
-	var s = fmt.Sprintf("%b", input)
+	BinaryGap(1025)
+}
+
+func BinaryGap(i int) {
+	var s = fmt.Sprintf("%b", i)
 	fmt.Println(s)
 	var tmp = []int{0, 0}
 	var max = 0
@@ -22,6 +25,6 @@ func main() {
 		}
 	}
 
-	fmt.Println(tmp[1])
+	// fmt.Println(tmp[1])
 	return
 }

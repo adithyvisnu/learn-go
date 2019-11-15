@@ -8,8 +8,10 @@ func main() {
 	m["Answer"] = "42"
 	fmt.Println("The value:", m["Answer"])
 
-	m["Answer"] = "48"
-	fmt.Println("The value:", m["Answer"])
+	m["answeR"] = "41"
+	fmt.Println("The value:", m)
+
+	
 
 	delete(m, "Answer")
 	fmt.Println("The value:", m["Answer"])

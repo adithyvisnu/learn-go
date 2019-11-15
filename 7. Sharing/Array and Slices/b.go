@@ -27,7 +27,7 @@ func main() {
 	// kartu[5] = "lain"
 	// fmt.Println(kartu)
 
-	numbers := make([]int, 3, 10)
+	numbers := make([]int, 3, 5)
 	// for index := 0; index < len(numbers); index++ {
 
 	// }
@@ -38,7 +38,7 @@ func main() {
 	fmt.Println(numbers)
 	fmt.Println(len(numbers))
 	fmt.Println(cap(numbers))
-	fmt.Println(numbers[2:5])
+	fmt.Println(numbers[2:4])
 	// numbers[4] = 12
 	// fmt.Println(numbers)
 	numbers = append(numbers, 3)
